@@ -11,7 +11,7 @@ import {
   FaFileAlt,
 } from "react-icons/fa";
 
-export default function Home() {
+const Portfolio = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -72,6 +72,12 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full font-semibold"
+            onClick={() =>
+              window.open(
+                "https://github.com/yogeshkumarb01?tab=repositories",
+                "_blank"
+              )
+            }
           >
             View My Work
           </motion.button>
@@ -373,7 +379,7 @@ export default function Home() {
 
       <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-12">Let's Connect</h2>
+          <h2 className="text-4xl font-bold mb-12">Let&#39;s Connect</h2>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <motion.div
@@ -448,4 +454,5 @@ export default function Home() {
       </section>
     </div>
   );
-}
+};
+export default Portfolio;
