@@ -98,7 +98,7 @@ const Portfolio = () => {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
               <div>
                 <h3 className="text-2xl font-bold text-purple-400">
-                  RCS Technologies
+                  RCS Tech LLP
                 </h3>
                 <p className="text-gray-400">Full Stack Developer</p>
               </div>
