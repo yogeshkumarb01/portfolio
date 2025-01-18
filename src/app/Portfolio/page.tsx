@@ -21,7 +21,7 @@ const Portfolio = () => {
     transition: { duration: 0.6 },
   };
 
-  const handleNavigationClick = (section: any) => {
+  const handleNavigationClick = (section: string) => {
     setVisibleSection(section);
   };
 
