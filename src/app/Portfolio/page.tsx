@@ -147,6 +147,7 @@ const Portfolio = () => {
                   "MySQL",
                   "JPA",
                   "REST APIs",
+                  "React Js",
                 ].map((tech, index) => (
                   <span
                     key={index}
