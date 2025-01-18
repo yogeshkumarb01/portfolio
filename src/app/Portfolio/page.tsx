@@ -373,7 +373,7 @@ const Portfolio = () => {
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   className={`bg-gradient-to-r ${
                     edu.gradient
-                  } p-8 rounded-2xl shadow-xl 
+                  } p-8 rounded-2xl shadow-xl
             transform hover:-translate-y-2 transition-all duration-300
             ${index % 2 === 0 ? "rotate-1" : "-rotate-1"}`}
                 >
