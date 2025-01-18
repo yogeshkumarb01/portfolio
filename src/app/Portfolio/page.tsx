@@ -26,7 +26,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden text-2xl">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-opacity-80 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4">
@@ -34,7 +34,7 @@ const Portfolio = () => {
             <motion.div
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              className="text-xl font-bold"
+              className="text-3xl font-bold"
             >
               YK
             </motion.div>
@@ -50,7 +50,7 @@ const Portfolio = () => {
                 <Link
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-purple-400 transition-colors"
+                  className="hover:text-purple-400 transition-colors text-2xl"
                   onClick={() => handleNavigationClick(item.toLowerCase())}
                 >
                   {item}
@@ -70,17 +70,17 @@ const Portfolio = () => {
           className="min-h-screen flex items-center justify-center text-center px-4"
         >
           <div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+            <h1 className="text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
               Yogesh Kumar B
             </h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+            <p className="text-3xl mb-8 max-w-2xl mx-auto text-gray-300">
               Full Stack Developer specialized in React.js, Next.js, Java Spring
               Boot, and Microservices
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full font-semibold"
+              className="bg-purple-600 hover:bg-purple-700 px-8 py-3 rounded-full font-semibold text-2xl"
               onClick={() =>
                 window.open(
                   "https://github.com/yogeshkumarb01?tab=repositories",
@@ -96,7 +96,7 @@ const Portfolio = () => {
 
       {visibleSection === "experience" && (
         <section id="experience" className="py-20 px-4 bg-gray-900">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-6xl font-bold text-center mb-12">
             Work Experience
           </h2>
           <div className="max-w-7xl mx-auto">
@@ -108,12 +108,12 @@ const Portfolio = () => {
             >
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-purple-400">
+                  <h3 className="text-4xl font-bold text-purple-400">
                     RCS Tech LLP
                   </h3>
-                  <p className="text-gray-400">Full Stack Developer</p>
+                  <p className="text-2xl text-gray-400">Full Stack Developer</p>
                 </div>
-                <p className="text-gray-400">10/2024 - Present</p>
+                <p className="text-2xl text-gray-400">10/2024 - Present</p>
               </div>
 
               <div className="space-y-4">
@@ -135,7 +135,7 @@ const Portfolio = () => {
                     className="flex items-start"
                   >
                     <span className="text-purple-400 mr-4">▹</span>
-                    <p className="text-gray-300">{point}</p>
+                    <p className="text-2xl text-gray-300">{point}</p>
                   </motion.div>
                 ))}
               </div>
@@ -150,7 +150,7 @@ const Portfolio = () => {
                 ].map((tech, index) => (
                   <span
                     key={index}
-                    className="bg-purple-900 px-3 py-1 rounded-full text-sm"
+                    className="bg-purple-900 px-3 py-1 rounded-full text-2xl"
                   >
                     {tech}
                   </span>
@@ -163,7 +163,7 @@ const Portfolio = () => {
 
       {visibleSection === "projects" && (
         <section id="projects" className="py-20 px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-6xl font-bold text-center mb-12">
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -227,16 +227,18 @@ const Portfolio = () => {
                 whileHover={{ y: -10 }}
                 className="bg-gray-800 p-6 rounded-xl"
               >
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <h3 className="text-3xl font-semibold mb-2">{project.title}</h3>
                 {project.company && (
                   <p className="text-purple-400 mb-2">{project.company}</p>
                 )}
                 {project.period && (
-                  <p className="text-gray-400 mb-3">{project.period}</p>
+                  <p className="text-2xl text-gray-400 mb-3">
+                    {project.period}
+                  </p>
                 )}
                 <div className="mb-4">
                   {project.description.map((point, i) => (
-                    <p key={i} className="text-gray-400 mb-2">
+                    <p key={i} className="text-2xl text-gray-400 mb-2">
                       • {point}
                     </p>
                   ))}
@@ -245,14 +247,14 @@ const Portfolio = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-purple-900 px-3 py-1 rounded-full text-sm"
+                      className="bg-purple-900 px-3 py-1 rounded-full text-2xl"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 {project.contact && (
-                  <p className="mt-4 text-gray-400 text-sm">
+                  <p className="mt-4 text-2xl text-gray-400">
                     Contact: {project.contact}
                   </p>
                 )}
@@ -264,11 +266,11 @@ const Portfolio = () => {
 
       {visibleSection === "skills" && (
         <section id="skills" className="py-20 px-4 bg-gray-900">
-          <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
+          <h2 className="text-6xl font-bold text-center mb-12">Skills</h2>
 
           {/* Technical Skills */}
           <div className="max-w-7xl mx-auto mb-16">
-            <h3 className="text-2xl font-semibold text-center mb-8">
+            <h3 className="text-4xl font-semibold text-center mb-8">
               Technical Skills
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -292,7 +294,7 @@ const Portfolio = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-purple-800 to-purple-900 p-4 rounded-lg text-center"
+                  className="bg-gradient-to-r from-purple-800 to-purple-900 p-4 rounded-lg text-center text-2xl"
                 >
                   {skill}
                 </motion.div>
@@ -302,7 +304,7 @@ const Portfolio = () => {
 
           {/* Soft Skills */}
           <div className="max-w-7xl mx-auto">
-            <h3 className="text-2xl font-semibold text-center mb-8">
+            <h3 className="text-4xl font-semibold text-center mb-8">
               Soft Skills
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
@@ -317,7 +319,7 @@ const Portfolio = () => {
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-blue-800 to-blue-900 p-4 rounded-lg text-center"
+                  className="bg-gradient-to-r from-blue-800 to-blue-900 p-4 rounded-lg text-center text-2xl"
                 >
                   {skill}
                 </motion.div>
@@ -335,7 +337,7 @@ const Portfolio = () => {
             viewport={{ once: true }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
+            <h2 className="text-6xl md:text-7xl font-bold text-center mb-16 text-white">
               Education Journey
             </h2>
             <div className="space-y-8">
@@ -375,7 +377,7 @@ const Portfolio = () => {
             transform hover:-translate-y-2 transition-all duration-300
             ${index % 2 === 0 ? "rotate-1" : "-rotate-1"}`}
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                  <h3 className="text-4xl md:text-5xl font-bold mb-4 text-white">
                     {edu.degree}
                   </h3>
                   <div className="flex flex-wrap items-center gap-3 mb-6 text-white/90">
@@ -388,8 +390,8 @@ const Portfolio = () => {
                   <ul className="space-y-3">
                     {edu.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start text-white/90">
-                        <span className="mr-2 text-xl">✦</span>
-                        <span className="text-lg">{achievement}</span>
+                        <span className="mr-2 text-3xl">✦</span>
+                        <span className="text-2xl">{achievement}</span>
                       </li>
                     ))}
                   </ul>
@@ -403,20 +405,20 @@ const Portfolio = () => {
       {visibleSection === "contact" && (
         <section id="contact" className="py-20 px-5">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-5xl font-bold mb-12">Let&#39;s Connect</h2>
+            <h2 className="text-7xl font-bold mb-12">Let&#39;s Connect</h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="bg-gray-800 p-6 rounded-xl"
               >
-                <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
+                <h3 className="text-3xl font-semibold mb-4">Contact Info</h3>
                 <div className="space-y-3">
                   <p className="flex items-center justify-center gap-2">
                     <FaEnvelope className="text-purple-400" />
                     <a
                       href="mailto:yogeshoffi01@gmail.com"
-                      className="hover:text-purple-400"
+                      className="hover:text-purple-400 text-2xl"
                     >
                       yogeshoffi01@gmail.com
                     </a>
@@ -425,14 +427,16 @@ const Portfolio = () => {
                     <FaPhone className="text-purple-400" />
                     <a
                       href="tel:+917760471339"
-                      className="hover:text-purple-400"
+                      className="hover:text-purple-400 text-2xl"
                     >
                       +91 7760471339
                     </a>
                   </p>
                   <p className="flex items-center justify-center gap-2">
                     <FaMapMarkerAlt className="text-purple-400" />
-                    <span>Bengaluru, Karnataka, India</span>
+                    <span className="text-2xl">
+                      Bengaluru, Karnataka, India
+                    </span>
                   </p>
                 </div>
               </motion.div>
@@ -441,38 +445,39 @@ const Portfolio = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-gray-800 p-6 rounded-xl"
               >
-                <h3 className="text-xl font-semibold mb-4">
+                <h3 className="text-3xl font-semibold mb-4">
                   Professional Links
                 </h3>
                 <div className="space-y-3">
                   <p>
                     <a
                       href="https://linkedin.com/in/KBYogesh01"
-                      className="hover:text-purple-400 flex items-center justify-center gap-2"
+                      className="hover:text-purple-400 flex items-center justify-center gap-2 text-2xl"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaLinkedin className="text-2xl text-purple-400" />{" "}
+                      <FaLinkedin className="text-3xl text-purple-400" />{" "}
                       LinkedIn
                     </a>
                   </p>
                   <p>
                     <a
                       href="https://github.com/yogeshkumarb01?tab=repositories"
-                      className="hover:text-purple-400 flex items-center justify-center gap-2"
+                      className="hover:text-purple-400 flex items-center justify-center gap-2 text-2xl"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaGithub className="text-2xl text-purple-400" /> GitHub
+                      <FaGithub className="text-3xl text-purple-400" /> GitHub
                     </a>
                   </p>
                   <p>
                     <a
                       href="https://doi.org/10.1109/ICACCTech61146.2023.00049"
-                      className="hover:text-purple-400 flex items-center justify-center gap-2"
+                      className="hover:text-purple-400 flex items-center justify-center gap-2 text-2xl"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
+                      {" "}
                       <FaFileAlt className="text-purple-400" /> Research
                       Publication
                     </a>
